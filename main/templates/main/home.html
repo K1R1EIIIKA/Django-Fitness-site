@@ -6,4 +6,12 @@
 
     <h1>Главная страница</h1>
 
+    {% for offer in offers %}
+        {{ offer.title }}<br>
+        {{ offer.description }}<br>
+        {{ offer.price }}<br>
+        {{ offer.discount }}<br>
+        {{ offer.discount_price }}<br><br>
+    {% endfor %}
+
 {% endblock %}
