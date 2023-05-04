@@ -7,59 +7,41 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
 
 </head>
-<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+<body>
 
 <!-- MENU BAR -->
 <div class="wrapper">
+
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
 
-            <a class="navbar-brand" href="{% url 'home' %}">Gymso Fitness</a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="{% url 'home' %}">FitZone</a>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link smoothScroll">Home</a>
+                    <li>
+                        <a href="{% url 'about' %}" class="nav-link">О нас</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="{% url 'about' %}" class="nav-link smoothScroll">About Us</a>
+                    <li>
+                        <a href="{% url 'services' %}" class="nav-link">Услуги</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="#class" class="nav-link smoothScroll">Classes</a>
+                    <li>
+                        <a href="{% url 'instructors' %}" class="nav-link">Тренеры</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="#schedule" class="nav-link smoothScroll">Schedules</a>
+                    <li>
+                        <a href="{% url 'policy' %}" class="nav-link">Политика конфиденциальности</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link smoothScroll">Contact</a>
-                    </li>
-                </ul>
-
-                <ul class="social-icon ml-lg-3">
-                    <li><a href="https://fb.com/tooplate" class="fa fa-facebook"></a></li>
-                    <li><a href="#" class="fa fa-twitter"></a></li>
-                    <li><a href="#" class="fa fa-instagram"></a></li>
                 </ul>
             </div>
-
         </div>
     </nav>
 
@@ -74,16 +56,15 @@
             <div class="row">
 
                 <div class="ml-auto col-lg-4 col-md-5">
-                    <p class="copyright-text">Copyright &copy; 2023 Gymso Fitness Co.</p>
+                    <p>Copyright &copy; 2023 FitZone Co.</p>
                 </div>
 
                 <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
                     <p class="mr-4">
-                        <i class="fa fa-envelope-o mr-1"></i>
-                        <a href="#">hello@company.co</a>
+                        <a href="#">FitZone@company.co</a>
                     </p>
 
-                    <p><i class="fa fa-phone mr-1"></i> 010-020-0840</p>
+                    <p>010-020-0840</p>
                 </div>
 
             </div>
