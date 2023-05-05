@@ -6,8 +6,9 @@ from .models import Offer
 def home(request):
     offers = Offer.objects.all()
 
+    best_offers = sorted(offers, key=lambda x: x.discount, reverse=True)[:3]
     data = {
-        'offers': offers
+        'best_offers': best_offers
     }
 
     return render(request, 'main/home.html', data)
