@@ -389,7 +389,7 @@ main {
     }
 }
 
-.policy {
+.policy, .about-page {
     background: var(--about-bg-color);
     padding: 6rem 0 1rem 0;
 }
