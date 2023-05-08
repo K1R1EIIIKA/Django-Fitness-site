@@ -277,6 +277,10 @@ a:focus {
     padding: 0 4rem 0 0;
 }
 
+.full-w {
+    padding: 0;
+}
+
 /*---------------------------------------
     ABOUT & TEAM
 -----------------------------------------*/
@@ -389,7 +393,7 @@ main {
     }
 }
 
-.policy, .about-page {
+.policy, .about-page, .services {
     background: var(--about-bg-color);
     padding: 6rem 0 1rem 0;
 }

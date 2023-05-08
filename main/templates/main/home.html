@@ -114,59 +114,30 @@
                     <h2>Наши самые выгодные предложения</h2>
                 </div>
 
-                {% if best_offers.0 %}
-                    <div class="col-lg-4 col-md-6 col-12">
+                {% for offer in best_offers %}
+                    <div class="col-lg-4 col-md-6 mb-4">
                         <div class="class-info">
-                            <h3 class="mb-1">{{ best_offers.0.title }}</h3>
 
-                            <span>
-                                <strong><del>₽{{ best_offers.0.price|floatformat }}</del></strong>
-                                <h4>₽{{ best_offers.0.discount_price|floatformat }}</h4>
-                            </span>
+                            {% if offer.discount > 0 %}
+                                <h3 class="mb-1">{{ offer.title }}</h3>
+                                <span>
+                                    <strong><del>₽{{ offer.price|floatformat }}</del></strong>
+                                    <h4>₽{{ offer.discount_price|floatformat }}</h4>
+                                </span>
+
+                                <span class="class-price">-{{ offer.discount|floatformat }}%</span>
+                            {% else %}
+                                <h3 class="mb-2 full-w">{{ offer.title }}</h3>
+
+                                <span><h4 class="mt-1">₽{{ offer.price|floatformat }}</h4></span>
+                            {% endif %}
                             <hr>
 
-                            <span class="class-price">-{{ best_offers.0.discount|floatformat }}%</span>
+                            <p class="mt-3">{{ offer.description }}</p>
 
-                            <p class="mt-3">{{ best_offers.0.description }}</p>
                         </div>
                     </div>
-                {% endif %}
-
-                {% if best_offers.1 %}
-                    <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12">
-                        <div class="class-info">
-                            <h3 class="mb-1">{{ best_offers.1.title }}</h3>
-
-                            <span>
-                                <strong><del>₽{{ best_offers.1.price|floatformat }}</del></strong>
-                                <h4>₽{{ best_offers.1.discount_price|floatformat }}</h4>
-                            </span>
-                            <hr>
-
-                            <span class="class-price">-{{ best_offers.1.discount|floatformat }}%</span>
-
-                            <p class="mt-3">{{ best_offers.1.description }}</p>
-                        </div>
-                    </div>
-                {% endif %}
-
-                {% if best_offers.2 %}
-                    <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12">
-                        <div class="class-info">
-                            <h3 class="mb-1">{{ best_offers.2.title }}</h3>
-
-                            <span>
-                                <strong><del>₽{{ best_offers.2.price|floatformat }}</del></strong>
-                                <h4>₽{{ best_offers.2.discount_price|floatformat }}</h4>
-                            </span>
-                            <hr>
-
-                            <span class="class-price">-{{ best_offers.2.discount|floatformat }}%</span>
-
-                            <p class="mt-3">{{ best_offers.2.description }}</p>
-                        </div>
-                    </div>
-                {% endif %}
+                {% endfor %}
 
             </div>
         </div>
