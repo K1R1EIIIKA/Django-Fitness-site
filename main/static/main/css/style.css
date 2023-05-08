@@ -367,10 +367,6 @@ main {
         padding: 6px;
     }
 
-    .navbar {
-        margin-top: 22px;
-    }
-
     .navbar-collapse,
     .site-footer {
         text-align: center;
@@ -391,4 +387,9 @@ main {
     .contact h2 span {
         display: block;
     }
+}
+
+.policy {
+    background: var(--about-bg-color);
+    padding: 6rem 0 1rem 0;
 }
