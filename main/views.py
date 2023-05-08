@@ -19,7 +19,13 @@ def about(request):
 
 
 def services(request):
-    return render(request, 'main/services.html')
+    offers = Offer.objects.all()
+
+    data = {
+        'offers': offers
+    }
+
+    return render(request, 'main/services.html', data)
 
 
 def instructors(request):
